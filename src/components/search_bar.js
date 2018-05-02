@@ -1,0 +1,29 @@
+import React, { Component } from 'react';
+
+
+//Functional component
+// const SearchBar = () => {
+//   return <input />
+// }
+
+class SearchBar extends Component {
+  constructor(props){
+    super(props);
+
+    this.state = {term: 'Starting value' }
+  }
+
+  render () {
+    return (
+      <div>
+        <input
+          value = {this.state.term}
+          onChange={(event) => this.setState({ term: event.target.value})} />
+      </div>
+
+    );
+  }
+
+}
+
+export default SearchBar;
